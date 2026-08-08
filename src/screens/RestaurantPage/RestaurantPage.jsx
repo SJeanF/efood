@@ -5,6 +5,7 @@ import DisplayRest from '../../components/DisplayRest/DisplayRest'
 import MenuItem from '../../components/MenuItem/MenuItem'
 import Footer from '../../components/Footer/Footer'
 import DishModal from '../../components/DishModal/DishModal'
+import Aside from '../../components/Aside/Aside'
 
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
@@ -14,6 +15,7 @@ const RestaurantPerfil = () => {
   const [restInfos, setRestInfos] = useState(null)
   const [menuInfos, setMenuInfos] = useState(null)
   const [modalState, setModalState] = useState({visible: false})
+  const [asideIsVIsible, setAsideIsVisible] = useState(false);
   
   const {id} = useParams()
 
@@ -32,7 +34,7 @@ const RestaurantPerfil = () => {
   return (
     <S.RestPageC>
       <S.TopC>
-        <RestPageHero/>
+        <RestPageHero setAsideIsVisible={setAsideIsVisible}/>
         {restInfos != null && <DisplayRest title={restInfos.titulo} type={restInfos.tipo} image={restInfos.capa}/>}
       </S.TopC>
       <S.MenuC>
@@ -50,6 +52,7 @@ const RestaurantPerfil = () => {
       </S.MenuC>
       <Footer/>
       {modalState.visible && <DishModal setModal={setModalState} dish={modalState.dish}/>}
+      {asideIsVIsible && <Aside setAsideIsVisible={setAsideIsVisible}/>}
     </S.RestPageC>
   )
 }

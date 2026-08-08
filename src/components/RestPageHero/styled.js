@@ -27,3 +27,7 @@ export const HeroMessage = styled.div`
   color: #E66767;
   text-align: center;
 `
+
+export const CartMessage = styled(HeroMessage)`
+  cursor: pointer;
+`

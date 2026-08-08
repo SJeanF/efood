@@ -3,7 +3,11 @@ import * as S from './styled'
 import logo from '../../assets/logo.png'
 
 
-const RestPageHero = () => {
+const RestPageHero = ({setAsideIsVisible}) => {
+  const handleCartClick = () => {
+    setAsideIsVisible(true);
+  }
+
   return (
     <S.RestPageHeroC>
       <S.CenterC>
@@ -11,9 +15,9 @@ const RestPageHero = () => {
           Restaurantes
         </S.HeroMessage>
         <S.Logo src={logo} />
-        <S.HeroMessage>
+        <S.CartMessage onClick={handleCartClick}>
           0 produto(s) no carrinho
-        </S.HeroMessage>
+        </S.CartMessage>
       </S.CenterC>
     </S.RestPageHeroC>
   )
