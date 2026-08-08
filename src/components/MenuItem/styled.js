@@ -13,7 +13,11 @@ export const MenuItemC = styled.div`
 
 export const MenuItemHeroC = styled.div``
 
-export const MenuItemHero  = styled.img``
+export const MenuItemHero  = styled.img`
+  width: 304px;
+  height: 167px;
+  object-fit: fill;
+`
 
 export const ItemTitle = styled.p`
   width: 100%;

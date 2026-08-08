@@ -1,18 +1,17 @@
 import * as S from './styled'
 
-import restImage from '../../assets/image-2.png'
 
-const DisplayRest = () => {
+const DisplayRest = ({title, type, image}) => {
   return (
     <S.DisplayC>
       <S.DisplayImageC>
-        <S.DisplayImage src={restImage}/>
+        <S.DisplayImage src={image}/>
       </S.DisplayImageC>
       <S.Highlight>
-        Italiana
+        {type}
       </S.Highlight>
       <S.RestName>
-        La Dolce Vita Trattoria
+        {title}
       </S.RestName>
     </S.DisplayC>
   )

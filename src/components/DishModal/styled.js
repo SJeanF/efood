@@ -6,7 +6,7 @@ export const SafeArea = styled.div`
   left: 0;
   width: 100svw;
   height: 100svh;
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, .7);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +28,11 @@ export const CloseButton = styled.img`
   cursor: pointer;
 `
 
-export const DishImage = styled.img``
+export const DishImage = styled.img`
+  width: 280px;
+  height: 280px;
+  object-fit: fill;
+`
 
 export const InfosC = styled.div`
   margin-left: 32px;

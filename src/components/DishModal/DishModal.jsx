@@ -1,26 +1,30 @@
 import * as S from './styled'
 
-import dishImage from '../../assets/image-3.png'
 import closeImage from '../../assets/close-1.png'
 
-const DishModal = () => {
+const DishModal = ({dish, setModal}) => {
+
+  const handleCancel = () => {
+    setModal({visible: false})
+  }
+
   return (
-    <S.SafeArea>
-      <S.ModalC>
-        <S.CloseButton src={closeImage} />
-        <S.DishImage src={dishImage}/>
+    <S.SafeArea onClick={handleCancel}>
+      <S.ModalC onClick={(e) => e.stopPropagation()}>
+        <S.CloseButton onClick={handleCancel} src={closeImage} />
+        <S.DishImage src={dish.image}/>
         <S.InfosC>
           <S.DishTitle>
-            Pizza Marguerita
+            {dish.title}
           </S.DishTitle>
           <S.DishDesc>
-            A pizza Margherita é uma pizza clássica da culinária italiana, reconhecida por sua simplicidade e sabor inigualável. Ela é feita com uma base de massa fina e crocante, coberta com molho de tomate fresco, queijo mussarela de alta qualidade, manjericão fresco e azeite de oliva extra-virgem. A combinação de sabores é perfeita, com o molho de tomate suculento e ligeiramente ácido, o queijo derretido e cremoso e as folhas de manjericão frescas, que adicionam um toque de sabor herbáceo. É uma pizza simples, mas deliciosa, que agrada a todos os paladares e é uma ótima opção para qualquer ocasião.
+            {dish.desc}
           </S.DishDesc>
           <S.Portion>
-            Serve: de 2 a 3 pessoas
+            {dish.portion}
           </S.Portion>
           <S.AddCartButton>
-            Adicionar ao carrinho - R$ 60,90
+            Adicionar ao carrinho - R$ {dish.price.toFixed(2)}
           </S.AddCartButton>
         </S.InfosC>
       </S.ModalC>

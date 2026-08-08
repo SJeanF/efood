@@ -26,6 +26,9 @@ export const DisplayImageC = styled.div`
 `
 
 export const DisplayImage = styled.img`
+  width: 100svw;
+  height: 280px;
+  object-fit: fill;
 `
 
 export const Highlight = styled.p`

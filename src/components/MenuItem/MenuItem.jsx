@@ -1,21 +1,34 @@
 import * as S from './styled'
 
 
-import Image from '../../assets/image-3.png'
+const MenuItem = ({id, title, desc, image, portion, price, setModal}) => {
 
-const MenuItem = () => {
+  const handleLeanMore = () => {
+    setModal({
+      dish: {
+        id: id,
+        title: title,
+        desc: desc,
+        image: image,
+        portion: portion,
+        price: price,
+      },
+      visible: true,
+    })
+  }
+
   return (
     <S.MenuItemC>
       <S.MenuItemHeroC>
-        <S.MenuItemHero src={Image}/>
+        <S.MenuItemHero src={image}/>
       </S.MenuItemHeroC>
       <S.ItemTitle>
-        Pizza Marguerita
+        {title}
       </S.ItemTitle>
       <S.ItemDesc>
-        A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!
+        {desc}
       </S.ItemDesc>
-      <S.AddCartButton>Adicionar ao carrinho</S.AddCartButton>
+      <S.AddCartButton onClick={handleLeanMore} type='button'>Mais detalhes</S.AddCartButton>
     </S.MenuItemC>
   )
 }
