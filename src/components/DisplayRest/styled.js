@@ -10,6 +10,7 @@ export const DisplayImageC = styled.div`
   position: absolute;
   display: inline-block;
   max-height: 280px;
+  width: 100%;
 
   &::after {
     content: '';
@@ -26,7 +27,7 @@ export const DisplayImageC = styled.div`
 `
 
 export const DisplayImage = styled.img`
-  width: 100svw;
+  width: 100%;
   height: 280px;
   object-fit: fill;
 `

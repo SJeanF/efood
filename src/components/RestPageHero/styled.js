@@ -3,7 +3,7 @@ import background from "../../assets/fundo.png"
 
 export const RestPageHeroC = styled.div`
   background-image: url(${background}); 
-  width: 100svw;
+  width: 100%;
   min-height: 186px;
   display: flex;
   align-items: center;
