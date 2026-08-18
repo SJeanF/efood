@@ -5,7 +5,7 @@ import DisplayRest from '../../components/DisplayRest/DisplayRest'
 import MenuItem from '../../components/MenuItem/MenuItem'
 import Footer from '../../components/Footer/Footer'
 
-import { useParams } from 'react-router'
+import { useNavigate, useParams } from 'react-router'
 
 import restInfos from '../../assets/restInfos.json'
 import restMenu from '../../assets/restMenus.json'
@@ -14,16 +14,21 @@ import restBack1Image from '../../assets/image-1-2.png'
 import restBack2Image from '../../assets/image-1.png'
 
 const RestaurantPerfil = () => {
+  const navigate = useNavigate();
   
   const {id} = useParams()
 
   const currRestInfos = restInfos.find((curr) => curr.id == id)
   const currMenuInfos = restMenu.find((curr) => curr.id == id)
 
+  const handleBackHome = () => {
+    navigate('/')
+  }
+  
   return (
     <S.RestPageC>
       <S.TopC>
-        <RestPageHero/>
+        <RestPageHero navigate={handleBackHome}/>
         {currRestInfos != null && <DisplayRest title={currRestInfos.titulo} type={currRestInfos.tipo} image={id == 0? restBack1Image: restBack2Image}/>}
       </S.TopC>
       <S.MenuC>

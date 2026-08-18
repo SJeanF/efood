@@ -3,13 +3,13 @@ import * as S from './styled'
 import logo from '../../assets/logo.png'
 
 
-const RestPageHero = () => {
+const RestPageHero = ({navigate}) => {
   return (
     <S.RestPageHeroC>
       <S.CenterC>
-        <S.HeroMessage>
+        <S.RestHeroMessage onClick={() => navigate()}>
           Restaurantes
-        </S.HeroMessage>
+        </S.RestHeroMessage>
         <S.Logo src={logo} />
         <S.HeroMessage>
           0 produto(s) no carrinho
