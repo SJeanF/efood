@@ -18,10 +18,16 @@ export const EmphasisC = styled.div`
   top: 16px;
   right: 16px;
   cursor: default;
+
+  :last-child {
+    margin-left: 16px;
+  }
 `
 
 export const RestImage = styled.img`
-  max-height: 217px;
+  width: 472px;
+  height: 217px;
+  object-fit: fill
 `
 
 export const MidBottonC = styled.div`
@@ -63,11 +69,17 @@ export const BottomC = styled.div`
 `
 
 export const RestDesc = styled.p`
+  max-width: 456px;
+  height: 88px;
   font-size: 14x;
   color: #E66767;
   font-weight: 400;
   line-height: 22px;
   margin-bottom: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `
 
 export const ButtonStyle = styled.button`

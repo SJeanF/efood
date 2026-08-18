@@ -1,0 +1,108 @@
+[
+  {
+    "id": 0,
+    "cardapio": [
+      { 
+        "id": 0,
+        "nome": "Pizza Marguerita",
+        "descricao": "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
+        "porcao": null,
+        "preco": 0,
+        "foto": null
+      },
+      { 
+        "id": 0,
+        "nome": "Pizza Marguerita",
+        "descricao": "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
+        "porcao": null,
+        "preco": 0,
+        "foto": null
+      },
+      { 
+        "id": 0,
+        "nome": "Pizza Marguerita",
+        "descricao": "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
+        "porcao": null,
+        "preco": 0,
+        "foto": null
+      },
+      { 
+        "id": 0,
+        "nome": "Pizza Marguerita",
+        "descricao": "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
+        "porcao": null,
+        "preco": 0,
+        "foto": null
+      },
+      { 
+        "id": 0,
+        "nome": "Pizza Marguerita",
+        "descricao": "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
+        "porcao": null,
+        "preco": 0,
+        "foto": null
+      },
+      { 
+        "id": 0,
+        "nome": "Pizza Marguerita",
+        "descricao": "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
+        "porcao": null,
+        "preco": 0,
+        "foto": null
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "cardapio": [
+      { 
+        "id": 0,
+        "nome": "Pizza Margueritaa",
+        "descricao": "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
+        "porcao": null,
+        "preco": 0,
+        "foto": null
+      },
+      { 
+        "id": 0,
+        "nome": "Pizza Marguerita",
+        "descricao": "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
+        "porcao": null,
+        "preco": 0,
+        "foto": null
+      },
+      { 
+        "id": 0,
+        "nome": "Pizza Marguerita",
+        "descricao": "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
+        "porcao": null,
+        "preco": 0,
+        "foto": null
+      },
+      { 
+        "id": 0,
+        "nome": "Pizza Marguerita",
+        "descricao": "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
+        "porcao": null,
+        "preco": 0,
+        "foto": null
+      },
+      { 
+        "id": 0,
+        "nome": "Pizza Marguerita",
+        "descricao": "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
+        "porcao": null,
+        "preco": 0,
+        "foto": null
+      },
+      { 
+        "id": 0,
+        "nome": "Pizza Marguerita",
+        "descricao": "A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!",
+        "porcao": null,
+        "preco": 0,
+        "foto": null
+      }
+    ]
+  }
+]
