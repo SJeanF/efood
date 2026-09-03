@@ -1,13 +1,20 @@
 import * as S from './styled'
 
 import logo from '../../assets/logo.png'
+import { useNavigate } from 'react-router'
 
 
-const RestPageHero = ({navigate}) => {
+const RestPageHero = () => {
+  const navigate = useNavigate()
+
+  const handleClickBackHome = () => {
+    navigate('/')
+  }
+
   return (
     <S.RestPageHeroC>
       <S.CenterC>
-        <S.RestHeroMessage onClick={() => navigate()}>
+        <S.RestHeroMessage onClick={handleClickBackHome}>
           Restaurantes
         </S.RestHeroMessage>
         <S.Logo src={logo} />
