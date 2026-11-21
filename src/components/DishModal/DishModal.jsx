@@ -1,6 +1,11 @@
+import { useEffect } from 'react'
+
 import * as S from './styled'
 
 import closeImage from '../../assets/close-1.png'
+
+const formatPrice = (value) =>
+  Number(value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
 const DishModal = ({dish, setModal}) => {
 
@@ -8,11 +13,22 @@ const DishModal = ({dish, setModal}) => {
     setModal({visible: false})
   }
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setModal({visible: false})
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [setModal])
+
   return (
     <S.SafeArea onClick={handleCancel}>
       <S.ModalC onClick={(e) => e.stopPropagation()}>
-        <S.CloseButton onClick={handleCancel} src={closeImage} />
-        <S.DishImage src={dish.image}/>
+        <S.CloseButton type='button' onClick={handleCancel} aria-label='Fechar'>
+          <img src={closeImage} alt='' />
+        </S.CloseButton>
+        <S.DishImage src={dish.image} alt={dish.title}/>
         <S.InfosC>
           <S.DishTitle>
             {dish.title}
@@ -21,10 +37,10 @@ const DishModal = ({dish, setModal}) => {
             {dish.desc}
           </S.DishDesc>
           <S.Portion>
-            {dish.portion}
+            Serve: {dish.portion}
           </S.Portion>
-          <S.AddCartButton>
-            Adicionar ao carrinho - R$ {dish.price.toFixed(2)}
+          <S.AddCartButton type='button'>
+            Adicionar ao carrinho - {formatPrice(dish.price)}
           </S.AddCartButton>
         </S.InfosC>
       </S.ModalC>

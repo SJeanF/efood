@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const RestItemC = styled.div`
+  width: 100%;
   max-width: 472px;
-  max-height: 398px;
+  background-color: #FFFFFF;
   border: 1px solid #E66767;
   border-top: none;
 `
 
 export const TopC = styled.div`
-  max-height: 217px;
-  margin-bottom: 8px;
+  height: 217px;
   position: relative;
 `
 
@@ -17,79 +17,88 @@ export const EmphasisC = styled.div`
   position: absolute;
   top: 16px;
   right: 16px;
+  display: flex;
+  gap: 8px;
   cursor: default;
-
-  :last-child {
-    margin-left: 16px;
-  }
 `
 
 export const RestImage = styled.img`
-  width: 472px;
+  width: 100%;
   height: 217px;
-  object-fit: fill
+  object-fit: cover;
 `
 
 export const MidBottonC = styled.div`
-  padding: 16px;
-  padding-top: 0;
+  padding: 8px 7px 7px;
 `
 
 export const MidC = styled.div`
+  min-height: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 13px;
 `
 
 export const RestTitle = styled.h4`
   font-size: 18px;
+  line-height: 21px;
   color: #E66767;
-  font-weight: bold;
+  font-weight: 700;
 `
 
 export const StarC = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
+  gap: 8px;
 `
 
 export const Note = styled.h5`
   font-size: 18px;
+  line-height: 21px;
   color: #E66767;
   font-weight: 700;
-  text-align: center;
-  margin-right: 8px;
 `
 
-export const Star = styled.img``
-
-export const BottomC = styled.div`
-  margin-bottom: 16px;
+export const Star = styled.img`
+  width: 21px;
+  height: 20px;
 `
+
+export const BottomC = styled.div``
 
 export const RestDesc = styled.p`
-  max-width: 456px;
   height: 88px;
-  font-size: 14x;
+  font-size: 14px;
   color: #E66767;
   font-weight: 400;
   line-height: 22px;
-  margin-bottom: 4px;
+  margin-bottom: 16px;
+  white-space: pre-line;
   display: -webkit-box;
-  -webkit-line-clamp: 4; 
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 `
 
-export const ButtonStyle = styled.button`
+export const ButtonStyle = styled.span`
+  display: inline-block;
   background-color: #E66767;
-  color: white;
-  border: none;
-  padding: 8px;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 6px;
 `
 
-export const Button = styled(ButtonStyle)`
+export const Button = styled.button`
+  display: inline-block;
+  background-color: #E66767;
+  color: #FFFFFF;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 4px 8px;
   cursor: pointer;
 `
-

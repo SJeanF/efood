@@ -7,13 +7,13 @@ const RestaurantItem = ({id, title, desc, type, dest, note, img}) => {
   const navigate = useNavigate()
 
   const handleLearnMore = () => {
-    navigate(`restaurant/${id}`)
+    navigate(`/restaurant/${id}`)
   }
 
   return (
     <S.RestItemC>
       <S.TopC>
-        <S.RestImage src={img}/>
+        <S.RestImage src={img} alt={title}/>
         <S.EmphasisC>
           <S.ButtonStyle>{type}</S.ButtonStyle>
           {dest && <S.ButtonStyle>Destaque da semana</S.ButtonStyle>}
@@ -28,7 +28,7 @@ const RestaurantItem = ({id, title, desc, type, dest, note, img}) => {
             <S.Note>
               {note}
             </S.Note>
-            <S.Star src={starImage}/>
+            <S.Star src={starImage} alt=""/>
           </S.StarC>
         </S.MidC>
         <S.BottomC>

@@ -6,12 +6,10 @@ import logo from '../../assets/logo.png'
 const HomeHero = () => {
   return (
     <S.HomeC>
-      <S.CenterC>
-      <S.Logo src={logo} />
+      <S.Logo src={logo} alt="efood" />
       <S.HeroMessage>
-        Viva experiências gastronômicas no confoto da sua casa
+        Viva experiências gastronômicas no conforto da sua casa
       </S.HeroMessage>
-      </S.CenterC>
     </S.HomeC>
   )
 }

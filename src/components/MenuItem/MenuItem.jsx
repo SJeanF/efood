@@ -19,9 +19,7 @@ const MenuItem = ({id, title, desc, image, portion, price, setModal}) => {
 
   return (
     <S.MenuItemC>
-      <S.MenuItemHeroC>
-        <S.MenuItemHero src={image}/>
-      </S.MenuItemHeroC>
+      <S.MenuItemHero src={image} alt={title}/>
       <S.ItemTitle>
         {title}
       </S.ItemTitle>

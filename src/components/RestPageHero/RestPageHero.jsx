@@ -17,10 +17,10 @@ const RestPageHero = () => {
         <S.RestHeroMessage onClick={handleClickBackHome}>
           Restaurantes
         </S.RestHeroMessage>
-        <S.Logo src={logo} />
-        <S.HeroMessage>
+        <S.Logo src={logo} alt="efood" />
+        <S.CartMessage>
           0 produto(s) no carrinho
-        </S.HeroMessage>
+        </S.CartMessage>
       </S.CenterC>
     </S.RestPageHeroC>
   )

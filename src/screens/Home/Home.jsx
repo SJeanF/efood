@@ -19,10 +19,10 @@ const Home = () => {
   }, [])
 
   return (
-    <S.HomeC onClick={() => console.log(resList)}>
+    <S.HomeC>
       <HomeHero/>
       <S.ResList>
-      {resList != null && resList.map((curr) => <RestaurantItem id={curr.id} title={curr.titulo} desc={curr.descricao} type={curr.tipo} dest={curr.destacado} note={curr.avaliacao} img={curr.capa}/>)}
+      {resList != null && resList.map((curr) => <RestaurantItem key={curr.id} id={curr.id} title={curr.titulo} desc={curr.descricao} type={curr.tipo} dest={curr.destacado} note={curr.avaliacao} img={curr.capa}/>)}
       </S.ResList>
       <Footer/>
     </S.HomeC>
