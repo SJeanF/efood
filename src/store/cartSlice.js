@@ -27,6 +27,9 @@ const cartSlice = createSlice({
     removeItem: (state, action) => {
       state.items = state.items.filter((item) => item.cartId !== action.payload)
     },
+    clearCart: (state) => {
+      state.items = []
+    },
     openCart: (state) => {
       state.isOpen = true
     },
@@ -36,7 +39,7 @@ const cartSlice = createSlice({
   },
 })
 
-export const { addItem, removeItem, openCart, closeCart } = cartSlice.actions
+export const { addItem, removeItem, clearCart, openCart, closeCart } = cartSlice.actions
 
 // valor total = soma do preço dos produtos (em centavos, evita erro de ponto flutuante)
 export const selectCartTotal = (state) =>
