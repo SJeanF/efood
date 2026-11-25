@@ -1,16 +1,24 @@
 import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 
 import * as S from './styled'
 
 import closeImage from '../../assets/close-1.png'
 
-const formatPrice = (value) =>
-  Number(value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+import { addItem, openCart } from '../../store/cartSlice'
+import { formatPrice } from '../../utils/format'
 
 const DishModal = ({dish, setModal}) => {
+  const dispatch = useDispatch()
 
   const handleCancel = () => {
     setModal({visible: false})
+  }
+
+  const handleAddToCart = () => {
+    dispatch(addItem(dish))
+    setModal({visible: false})
+    dispatch(openCart())
   }
 
   useEffect(() => {
@@ -39,7 +47,7 @@ const DishModal = ({dish, setModal}) => {
           <S.Portion>
             Serve: {dish.portion}
           </S.Portion>
-          <S.AddCartButton type='button'>
+          <S.AddCartButton type='button' onClick={handleAddToCart}>
             Adicionar ao carrinho - {formatPrice(dish.price)}
           </S.AddCartButton>
         </S.InfosC>

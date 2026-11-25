@@ -37,4 +37,5 @@ export const RestHeroMessage = styled(HeroMessage)`
 
 export const CartMessage = styled(HeroMessage)`
   text-align: right;
+  cursor: pointer;
 `

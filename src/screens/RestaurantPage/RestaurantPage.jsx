@@ -5,6 +5,7 @@ import DisplayRest from '../../components/DisplayRest/DisplayRest'
 import MenuItem from '../../components/MenuItem/MenuItem'
 import Footer from '../../components/Footer/Footer'
 import DishModal from '../../components/DishModal/DishModal'
+import Cart from '../../components/Cart/Cart'
 
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
@@ -49,6 +50,7 @@ const RestaurantPerfil = () => {
         </S.MenuList>
       </S.MenuC>
       <Footer/>
+      <Cart/>
       {modalState.visible && <DishModal setModal={setModalState} dish={modalState.dish}/>}
     </S.RestPageC>
   )
