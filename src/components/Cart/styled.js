@@ -111,3 +111,84 @@ export const ContinueButton = styled.button`
     cursor: not-allowed;
   }
 `
+
+export const StepTitle = styled.h3`
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFEBD9;
+  margin-bottom: 14px;
+`
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+`
+
+export const Row = styled.div`
+  display: grid;
+  grid-template-columns: ${({ $cols }) => $cols || '1fr 1fr'};
+  gap: ${({ $gap }) => $gap || '34px'};
+`
+
+export const Field = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+  min-width: 0;
+
+  label {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFEBD9;
+  }
+
+  input {
+    width: 100%;
+    height: 32px;
+    padding: 0 8px;
+    border: 2px solid #FFEBD9;
+    background-color: #FFEBD9;
+    color: #4B4B4B;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #4B4B4B;
+  }
+
+  input:invalid:not(:placeholder-shown) {
+    border-color: #8B0000;
+  }
+`
+
+export const Actions = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+`
+
+export const ErrorMessage = styled.p`
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF;
+`
+
+export const Text = styled.p`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #FFEBD9;
+  margin-bottom: 22px;
+`
+
+export const ConcludeButton = styled(ContinueButton)`
+  margin-top: 2px;
+`
